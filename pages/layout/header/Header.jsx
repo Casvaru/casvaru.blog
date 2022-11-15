@@ -12,7 +12,7 @@ export default function NavBar () {
       </Link>
       <nav>
         <ul className={Header.navigation}>
-          <li><Link className={Header.link} href='http://casvaru.com'> <Image className={Header.arrow} src={Arrow} alt='Flecha a la izquierda' /> Ir al portafolio</Link></li>
+          <li><Link className={Header.link} href='https://casvaru.com'> <Image className={Header.arrow} src={Arrow} alt='Flecha a la izquierda' /> Ir al portafolio</Link></li>
         </ul>
       </nav>
     </header>
