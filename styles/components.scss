@@ -49,10 +49,15 @@
 }
 .articleLink{
   text-decoration: underline !important;
+  font-style: italic;
   cursor: pointer;
     &:hover{
       color: $clr-main;
     }
+}
+.articleVideo{
+  width: 100%; height: auto;
+  margin-top: 20px; margin-bottom: 20px;
 }
 .articleVar{
   background: #eaeaea;
