@@ -1,11 +1,11 @@
-import cardStyles from '../../components/CardArticle/CardArticle.module.scss'
-import imgStyles from '../../components/CardArticle/components/ImageArticle/ImageArticle.module.scss'
-import bodyStyles from '../../components/CardArticle/components/BodyArticle/BodyArticle.module.scss'
-import dateStyles from '../../components/CardArticle/components/DateCard/DateArticle.module.scss'
-import arrowStyles from '../../components/CardArticle/components/ArrowHover/ArrowHover.module.scss'
-import articleStyles from '../articulo/article.module.scss'
+import cardStyles from '../components/CardArticle/CardArticle.module.scss'
+import imgStyles from '../components/CardArticle/components/ImageArticle/ImageArticle.module.scss'
+import bodyStyles from '../components/CardArticle/components/BodyArticle/BodyArticle.module.scss'
+import dateStyles from '../components/CardArticle/components/DateCard/DateArticle.module.scss'
+import arrowStyles from '../components/CardArticle/components/ArrowHover/ArrowHover.module.scss'
+import articleStyles from './articulo/article.module.scss'
 
-import Arrow from '../../public/icons/svg/arrow.svg'
+import Arrow from '../components/CardArticle/components/ArrowHover/ArrowHover'
 
 import Image from 'next/image'
 import Link from 'next/link'
