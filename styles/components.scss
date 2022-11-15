@@ -1,0 +1,110 @@
+@import './theme.scss';
+
+.editor{
+  width: 80%;
+  margin-top: 80px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Verdana', sans-serif !important;
+  & b{
+    font-family: 'Verdana', sans-serif !important;
+  }
+    & p{
+      font-family: 'Verdana', sans-serif !important;
+      width: 90%;
+      margin-top: 20px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      text-align: justify;
+      font-size: 1rem;
+      line-height: 25px;
+        &:nth-child(1):first-letter{
+          font-family: 'Verdana', sans-serif !important;
+          font-size: 4rem;
+          font-weight: 600;
+          margin: 5px 10px;
+          float: left;
+          text-shadow: 5px 3px 0px $clr-main;
+        }
+    }
+}
+.articleImage{
+  width: 100%; height: auto;
+  margin: 40px 0px;
+  background-color: #cccbcb;
+  background: linear-gradient(to right, #cccbcb 0%, #f2f2f2 20%, #cccbcb 40%, #cccbcb 100%);
+  animation: skeletonImg 3s infinite forwards linear;
+  @media(min-width: 1024px){
+    width: 80%;
+    margin-left: 10% !important;
+  }
+}
+@keyframes skeletonImg{
+  0%{
+      background-position: 0px 0px;
+  }
+  100%{
+      background-position: 900px 0px;
+  }
+}
+.articleLink{
+  text-decoration: underline;
+  cursor: pointer;
+    &:hover{
+      color: $clr-main;
+    }
+}
+.articleVar{
+  background: #eaeaea;
+  color: #1a1a1a;
+  padding: 3px;
+  border-radius: 3px;
+  font-family: consolas, monospace;
+  display: inline-block;
+}
+.articleCode{
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #282c34;
+  color: #dadada;
+  display: block;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+    &::before{
+      content: "";
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      background: #ff5f5a;
+      position: absolute;
+      margin: 15px;
+    }
+    &::after{
+      content: "";
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      background: #ffbe2e;
+      position: absolute;
+      inset: 0;
+      margin: 15px 40px;
+    }
+  & .line{
+    padding: 5px 15px;
+    font-family: consolas, monospace;
+    display: block;
+    font-size: 1rem;
+    &::after{
+      content: "";
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      background: #2aca44;
+      position: absolute;
+      inset: 0;
+      margin: 15px 65px;
+    }
+      &:nth-child(1){
+        padding-top: 40px;
+      }
+  }
+}

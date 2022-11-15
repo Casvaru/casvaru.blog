@@ -1,0 +1,26 @@
+.container{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+.bodyText{
+  font-size: 0.9rem;
+  text-align: justify;
+  min-height: 120px;
+  overflow: hidden;
+  font-family: 'Verdana', sans-serif;
+  line-height: 18px;
+  @media(min-width: 1024px){
+    min-height: 130px;
+    padding: 20px 40px;
+  }
+}
+.title{
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 1.5rem;
+  @media(min-width: 1024px){
+    padding: 10px 40px;
+    text-align: left;
+  }
+}

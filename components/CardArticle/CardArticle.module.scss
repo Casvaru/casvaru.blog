@@ -1,0 +1,40 @@
+.link{
+  width: 100%; height: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+.main{
+  width: 90%; height: 450px;
+  margin: auto;
+  max-width: 1000px;
+  position: relative;
+
+  @media(min-width: 1024px){
+    display: flex;
+    height: 250px;
+  }
+}
+.article{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.imgCard{
+  aspect-ratio: 16/9;
+  width: 100%; height: auto;
+}
+.bodyCard{
+  position: relative;
+}
+.arrow{
+  position: absolute;
+  right: 0; bottom: 0;
+  opacity: 0;
+  margin-right: 50px;
+  transition: .2s ease;
+  margin-bottom: 10px;
+}
+.main:hover .arrow{
+  transition: .3s ease;
+  margin-right: 40px;
+  opacity: 1;
+}

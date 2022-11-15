@@ -1,0 +1,36 @@
+.container{
+  width: 60%; height: 80px;
+  margin-left: 50%;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%);
+  margin-top: 200px; margin-bottom: 50px;
+    & .containerIcons{
+      display: flex;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-50%);
+      margin-left: 50%;
+      margin-top: 15px;
+        & .icons{
+          width: 35px; height: 35px;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 50%;
+          transition: .2s ease;
+          opacity: .7;
+            &:hover{
+              opacity: 1;
+              transition: .3s ease;
+            }
+        }
+    }
+}
+@media (prefers-color-scheme: dark){
+  .container{
+    border-top: 1px solid #ffffff;
+      & .icons{
+        filter: invert(100);
+      }
+  }
+}

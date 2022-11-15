@@ -1,0 +1,29 @@
+.container{
+  display: block;
+  width: 100%; height: auto;
+  max-width: 500px;
+  margin: auto;
+  background-color: #d8d8d8;
+  background: linear-gradient(to right, #d8d8d8 0%, #e8e8e8 20%, #d8d8d8 40%, #d8d8d8 100%);
+  border-radius: 15px;
+  aspect-ratio: 16/9;
+  animation: skeletonImg 3s infinite forwards linear;
+  overflow: hidden;
+  min-width: 45%;
+}
+.image{
+  width: 100%; height: auto;
+  transition: .2s ease;
+    &:hover{
+      transform: scale(1.02);
+      transition: .3s ease;
+    }
+}
+@keyframes skeletonImg{
+  0%{
+      background-position: -400px 0px;
+  }
+  100%{
+      background-position: 400px 0px;
+  }
+}

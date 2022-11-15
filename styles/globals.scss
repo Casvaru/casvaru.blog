@@ -1,0 +1,36 @@
+@import './theme.scss';
+
+*{
+  padding: 0; margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background: $clr-main;
+  border-radius: 7px;
+}
+body{
+  background: #f6f6f6;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 2500px;
+  margin: auto;
+  background-repeat: no-repeat !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: white;
+    backdrop-filter: blur(15px) !important;
+  }
+  body{
+    color-scheme: dark;
+    background: #130d17;
+  }
+}

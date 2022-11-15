@@ -1,0 +1,29 @@
+.container{
+  display: flex;
+  justify-content: flex-end;
+  color: #474747;
+  font-weight: 300;
+  width: 90%;
+  font-size: 0.7rem;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media(min-width: 1024px){
+    font-size: 1rem;
+  }
+  & .link{
+    padding: 0px 5px;
+      &:hover{
+        text-decoration: underline;
+      }
+  }
+}
+.active{
+  font-weight: bold;
+  padding: 0px 5px;
+}
+@media (prefers-color-scheme: dark) {
+  .link , .active{
+      color: #ffffff;
+  }
+}

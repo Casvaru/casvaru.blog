@@ -1,0 +1,14 @@
+.container{
+  padding: 5px 0px;
+  color: #434343;
+  bottom: 0;
+  @media(min-width: 1024px){
+    padding: 5px 40px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .container{
+    color: #ffffff;
+    opacity: .8;
+  }
+}

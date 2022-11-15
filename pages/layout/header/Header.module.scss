@@ -1,0 +1,67 @@
+@import '../../../styles/theme.scss';
+
+.container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50%; padding-top: 10px;
+    transform: translateX(-50%);
+    // position: fixed;
+    // background: rgba(255,255,255, .5);
+    // backdrop-filter: blur(5px);
+    // z-index: 5;
+    // top: 0;
+    // max-width: 2500px;
+    // border-radius: 20px;
+}
+.navigation{
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.link{
+    color: #1e1e1e;
+    font-size: 1rem;
+    opacity: .7;
+    padding: 10px 10px 10px 30px;
+    transition: .2s ease;
+        &:hover{
+            opacity: 1;
+            color: $clr-main;
+        }
+        &:hover .arrow{
+            opacity: 1;
+            margin-left: -25px;
+            transition: .3s ease;
+        }
+}
+.arrow{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: -10px;
+    transition: .2s ease;
+    opacity: 0;
+}
+.logo{
+    width: 50px; height: 50px;
+    margin: 0px 20px 0px 20px;
+    opacity: .7;
+    transition: .2s ease;
+    &:hover{
+        opacity: 1;
+        transition: .3s ease;
+     }
+}
+@media (prefers-color-scheme: dark) {
+    .link{
+        color: #ffffff;
+        border-radius: 50px;
+        &:hover{
+            background: #ffffff;
+            transition: .3s ease;
+        }
+    }
+    .logo{
+        filter: invert(100);
+    }
+}
