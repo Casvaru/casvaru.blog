@@ -48,7 +48,7 @@
   }
 }
 .articleLink{
-  text-decoration: underline;
+  text-decoration: underline !important;
   cursor: pointer;
     &:hover{
       color: $clr-main;
