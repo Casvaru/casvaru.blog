@@ -7,7 +7,7 @@ import Logo from '../../../public/logo.svg'
 export default function NavBar () {
   return (
     <header className={Header.container}>
-      <Link href='/home' className={Header.logo}>
+      <Link href='./' className={Header.logo}>
         <Image priority className={Header.logoSvg} src={Logo} alt='' width={50} height={50} />
       </Link>
       <nav>

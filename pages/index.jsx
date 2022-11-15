@@ -5,7 +5,7 @@ import dateStyles from '../components/CardArticle/components/DateCard/DateArticl
 import arrowStyles from '../components/CardArticle/components/ArrowHover/ArrowHover.module.scss'
 import articleStyles from './articulo/article.module.scss'
 
-import Arrow from '../components/CardArticle/components/ArrowHover/ArrowHover'
+import Arrow from '../public/icons/svg/arrow.svg'
 
 import Image from 'next/image'
 import Link from 'next/link'
