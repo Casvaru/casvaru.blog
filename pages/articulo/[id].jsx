@@ -14,7 +14,7 @@ export default function Article ({ data }) {
     <>
       <Head title={`Casvaru | ${data.title}`} description={data.description} keywords={data.keyWords} />
       <span className={BreadStyles.container}>
-        <Link className={BreadStyles.link} href='../home'>Inicio</Link>
+        <Link className={BreadStyles.link} href='./'>Inicio</Link>
         <span>|</span>
         {/* <Link className={BreadStyles.link} href='./'>{data.breadCrumb}|</Link> */}
         <Link className={BreadStyles.active} href={`${data.id}`}>{data.title}</Link>
