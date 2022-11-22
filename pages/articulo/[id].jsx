@@ -1,6 +1,7 @@
 import Head from '../HeadIndex'
 import Link from 'next/link'
 import Image from 'next/image'
+import Layout from '../layout/layout'
 
 import BreadStyles from 'pages/layout/breadCrumbs/breadCrumbs.module.scss'
 import articleStyles from './article.module.scss'
@@ -31,6 +32,7 @@ export default function Article ({ data }) {
             __html: data.body
           }}
         />
+        {/* <Layout /> */}
         <div className={articleStyles.containerLink}>
           <div>
             <h5 className={articleStyles.titlelinks}>Ver en formato vídeo</h5>

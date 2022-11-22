@@ -7,7 +7,8 @@ import Footer from './layout/footer/footer'
 import { Poppins } from '@next/font/google'
 const poppins = Poppins({
   weight: '400',
-  bold: '600'
+  bold: '600',
+  subsets: ['Poppins']
 })
 
 function MyApp ({ Component, pageProps }) {

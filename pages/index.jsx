@@ -18,7 +18,7 @@ export default function Home ({ data }) {
           <Link className={cardStyles.link} href={`/articulo/${article.id}`} key={article.id} rel='noreferrer'>
             <article className={cardStyles.main}>
               <div className={imgStyles.container}>
-                <Image className={imgStyles.image} src={article.mainImg} alt='Imagen alt' width={2000} height={2000} sizes='(max-width: 768px) 90vw, (max-width: 1200px) 100vw' />
+                <Image className={imgStyles.image} src={article.mainImg} alt={article.alt} width={2000} height={2000} sizes='(max-width: 768px) 90vw, (max-width: 1200px) 100vw' />
               </div>
               <div className={bodyStyles.container}>
                 <h2 className={bodyStyles.title}> {article.title}</h2>
