@@ -15,7 +15,7 @@
         }
     }
     & .body{
-      width: 100%;
+      width: 90%;
       margin-top: 80px;
       margin-left: 50%;
       transform: translateX(-50%);
@@ -111,7 +111,10 @@
             padding: 5px 15px;
             font-family: consolas, monospace;
             display: block;
-            font-size: 1rem;
+            font-size: 0.8rem;
+              @media(min-width: 1024px){
+                font-size: 1rem;
+              }
             &::after{
               content: "";
               width: 15px; height: 15px;
