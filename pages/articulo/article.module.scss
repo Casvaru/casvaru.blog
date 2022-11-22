@@ -4,14 +4,15 @@
   width: 100%;
   margin-top: 50px;
     & .title{
-      width: 70%;
+      width: 90%;
       margin-top: 50px;
       margin-left: 50%;
       transform: translateX(-50%);
       text-align: center;
       font-size: 1.5rem;
         @media(min-width: 1024px){
-          font-size: 3rem;
+        width: 70%;
+        font-size: 3rem;
         }
     }
     & .body{
@@ -140,11 +141,12 @@
 }
 .dateArticle{
   font-size: 0.8rem;
-  width: 70%;
+  width: 90%;
   margin-top: 50px;
   margin-left: 50%;
   transform: translateX(-50%);
   @media(min-width: 1024px){
+    width: 70%;
     font-size: 1rem;
   }
 }
