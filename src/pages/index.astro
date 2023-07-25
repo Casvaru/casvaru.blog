@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import IconTwitter from '../components/icons/iconTwitter.astro';
+import IconTwitter from '../components/IconTwitter.astro';
 import IconTikTok from '../components/icons/IconTikTok.astro'
 import IconTwitch from '../components/icons/IconTwitch.astro'
 const posts = (await getCollection('blog')).sort(
