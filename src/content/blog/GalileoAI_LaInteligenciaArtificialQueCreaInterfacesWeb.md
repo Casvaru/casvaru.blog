@@ -12,7 +12,7 @@ El auge de las inteligencias artificiales llega a más profesiones cada día par
 
 La herramienta de la que hablaremos hoy es [Galileo AI](https://www.usegalileo.ai/) , una inteligencia artificial que está en early access pero que promete una ayuda increíble para la maquetación de diseños web responsive. Con solo insertar el prompt de lo que vayamos a construir, esta herramienta generará un diseño en formato de archivo editable de **Figma** que nos facilitará el prototipado y los ajustes que veamos pertinentes.
 <picture>
-  <video loop autoplay muted src="/public/230219galileoai.webm">
+  <video loop autoplay muted src="/230219galileoai.webm">
 </picture>
 
 Sin duda, estas herramientas son una gran ayuda para agilizar muchas iteraciones y enfocarse en solucionar problemas más importantes como la UX y otros factores decisivos al traer un nuevo producto o servicio al mercado.

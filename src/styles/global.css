@@ -14,10 +14,113 @@ body {
 	overflow-wrap: break-word;
 	line-height: 1.5;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	color: #f7f7f7;
+}
+h2{
+	padding-left: 5px;
+	border-left: 3px solid #871846;
+	margin: 20px 0px;
+}
+mark{
+	background-color: #871846;
+}
+a {
+	color: #ffffff;
+}
+a:hover{
+	color: #871846;
+}
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+content {
+	line-height: 1.6;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: #292929;
+}
 picture,
 video{
 	width: 100%;
 	padding: 10px 0px;
+}
+p{
+	padding: 5px 0px;
+}
+pre {
+	position: relative;
+	padding: 3rem 1rem 2rem 1rem;
+	border-radius: 15px;
+}
+pre::before{
+	position: absolute;
+	display: block;
+	top: 0; left: 0;
+	margin-top: 10px; margin-left: 10px;
+	content: "";
+	width: 15px; height: 15px;
+	background-color: #FF5F5A;
+	border-radius: 50%;
+	z-index: 10;
+}
+pre::after{
+	position: absolute;
+	display: block;
+	top: 0; left: 0;
+	margin-top: 10px; margin-left: 30px;
+	content: "";
+	width: 15px; height: 15px;
+	background-color: #FFBE2E;
+	border-radius: 50%;
+	z-index: 10;
+}
+pre > code {
+	position: relative;
+	all: unset;
+}
+pre > code::after{
+	position: absolute;
+	display: block;
+	top: 0; left: 0;
+	margin-top: 10px; margin-left: 50px;
+	content: "";
+	width: 15px; height: 15px;
+	background-color: #2ACA44;
+	border-radius: 50%;
+	z-index: 10;
+}
+blockquote {
+	border: 1px solid #999;
+	color: #222;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}
+ol, ul{
+	padding: 10px 30px;
 }
 .iconAstro{
 	width: 24px; height: 24px;

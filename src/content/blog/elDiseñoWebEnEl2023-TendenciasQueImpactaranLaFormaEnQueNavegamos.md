@@ -13,7 +13,7 @@ El diseño web es un campo en constante evolución, con nuevas tendencias y tecn
 
 La primera tendencia que exploraremos en el diseño web para el 2023 es la nueva capsula en la pantalla simulando la **dynamic island** que dió apple con el nuevo lanzamiento de su celular al mercado, el iPhone 14 sin duda la nueva incorporación del dynamic island una parte de hardware y la incorporación de software para el tema de notificaciones es algo muy llamativo que está dando nuevas ideas para la creación de menús, ajustes o caja de herramientas.
 <picture>
-  <video loop muted autoplay src="/public/230201dynamicux.webm">
+  <video loop muted autoplay src="/230201dynamicux.webm">
 </picture>
 
 Por último no podía terminar sin hablar de los nuevos estilos de diseño web como lo es el neomorfismo y glasmorfismo. El neomorfismo y el glasmorfismo son dos estilos de diseño de interfaces de usuario que se enfocan en la creación de elementos suaves y atractivos en la pantalla.
@@ -23,7 +23,7 @@ El neomorfismo es un estilo de diseño que busca imitar la apariencia y la inter
 Por otro lado, el glasmorfismo se enfoca en la creación de interfaces que parecen hechas de vidrio o materiales translúcidos. Este estilo utiliza transparencias, reflejos y sombras para crear una sensación de profundidad y luminosidad en la pantalla.
 
 Ambos estilos se han vuelto populares en los últimos años y se utilizan en muchas aplicaciones móviles y de escritorio para crear una experiencia atractiva y suave para el usuario.
-![Imagen de diseño de glasmorfismo](/public/230201glasmorfismo.webp)
+![Imagen de diseño de glasmorfismo](/230201glasmorfismo.webp)
 
 ## Diseño responsive
 

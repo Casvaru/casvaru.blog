@@ -18,7 +18,7 @@ En tu buscador favorito buscamos **ffmpeg** puedes hacer [click aquí](https://f
 
 Pasamos el mouse por la imagen de windows y debajo hacemos clic en Windows builds from gyan.dev, nos llevará a la web donde tienes las últimas builds, bajamos un poco y le damos al segundo link ffmpeg-git-full.7z. Una vez tengas descargado el archivo .zip, lo descomprimes y renombras la carpeta como ffmpeg, ahora vamos a mover esa carpeta con Ctr+X y nos vamos a nuestro disco local C/: y allí pegamos la carpeta. Ahora para poder acceder a este fichero desde la consola necesitamos agregarlo como una variable de entorno en nuestra terminal, para ello presionamos la tecla de Windows y escribimos Variables de entorno Damos clic en Path y en el botón de editar, buscamos el botón que dice Nuevo te permitirá escribir una nueva variable de entorno para tu terminal, simplemente escribimos la ruta donde pegamos nuestra carpeta, en mi caso es `C:\ffmpeg\bin` así que la escribo tal cual en ese espacio con las mismas barras inclinadas, no confundir con las otras barras inclinadas e importante en la ruta que escribimos le damos acceso a la carpeta bin y listo.
 <picture>
-  <video loop autoplay muted src="/public/221122variables.webm">
+  <video loop autoplay muted src="/221122variables.webm">
 </picture>
 
 ## Linux

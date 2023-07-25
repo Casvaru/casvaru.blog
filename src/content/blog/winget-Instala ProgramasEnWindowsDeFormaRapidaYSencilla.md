@@ -34,7 +34,7 @@ Vamos a hacer un repaso de los comandos más importantes que vas a hacer con win
 ```
 
 comentando un poco lo que hicimos fue acceder a winget seguido del método search y después el nombre del programa que desees buscar por ejemplo si quisieramos descargar blender, un programa gratuito para hacer modelación 3D sería lo siguiente: `winget search blender`
-![Winget instalar paquete](/public/230205wingetinstall.webp)
+![Winget instalar paquete](/230205wingetinstall.webp)
 
 Winget buscará en su repertorio todo los programas que lleven en su nombre la palabra que buscamos, se desplegarán todos los programas que coincidan con la búsqueda, como vemos hay 2 programas que nos sirve, el primero y el último, como podrás detallar son los mismos, solo cambian 2 factores que los diferencia y es el id y el Version Source, el id es el identificativo único, y el Source es la fuente donde lo va a descargar, si dice msstore significa que lo va a descargar desde la Microsoft Store, mientras que si dice Winget lo descargará desde su librería que está conectada a la página oficial, en este caso pueden escoger la que deseen, en mi caso esogeré la versión de winget y para la instalación solo necesitamos copiar el ID del programa y usar el comando.
 
