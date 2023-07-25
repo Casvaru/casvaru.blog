@@ -1,25 +1,45 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import Logo from '../components/icons/Logo.astro'
 import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
+	<a href="/" class="logo">
+		<Logo/>
+	</a>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="/">Inicio</HeaderLink>
+		<HeaderLink href="https://www.casvaru.com">Portafolio</HeaderLink>
 	</nav>
 </header>
 <style>
 	header {
+		position: fixed;
+		display: flex;
+		place-items: center;
+		justify-content: space-between;
+		padding: 0px 40px;
+		width: 100%; height: 60px;
+		inset: 0;
 		margin: 0em 0 2em;
+		backdrop-filter: blur(10px);
+		margin: 0 auto;
+		max-width: 1440px;
+		z-index: 100;
+	}
+	nav{
+		display: flex;
+		padding: 5px;
+		align-items: center;
+		gap: 20px;
+		/* max-width: 1440px; */
 	}
 	h2 {
 		margin: 0.5em 0;
+	}
+	.logo{
+		fill: white;
+		width: 50px; height: 50px;
 	}
 </style>

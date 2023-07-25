@@ -1,13 +1,26 @@
 ---
 const today = new Date();
+import IconTwitter from "./icons/iconTwitter.astro"
+import IconGithub from "./icons/iconGithub.astro"
+import IconTikTok from "./icons/IconTikTok.astro";
 ---
 
 <footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+	© {today.getFullYear()} Carlos Segura
+				| Hecho con mucho ❤️
 </footer>
 <style>
 	footer {
-		padding: 25px;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		place-content: center;
+		padding: 50px;
+		white-space: nowrap;
+	}
+	a{
+		padding: 0px 5px;
+	}
+	a:hover{
+		opacity: .5;
 	}
 </style>

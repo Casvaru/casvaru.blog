@@ -7,33 +7,23 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, author, timeToRead, id } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
 			<article>
+				<header class="headerArticle">
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="title">{title}</h1>
+				<h4>{author}</h4>
+				<h5>{timeToRead} minutos de lectura</h5>
 				<FormattedDate date={pubDate} />
 				{
 					updatedDate && (
@@ -42,10 +32,36 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						</div>
 					)
 				}
-				<hr />
+				</header>
 				<slot />
 			</article>
 		</main>
 		<Footer />
 	</body>
 </html>
+<style>
+	main{
+		margin-top: 75px;
+	}
+	.headerArticle{
+		padding: 0px 0px 50px 0px;
+	}
+	h1{
+		text-align: center;
+		font-size: 1.5rem;
+		line-height: 30px;
+		padding: 30px 0px;
+	}
+	.title {
+		font-size: 2em;
+		margin: 0.25em 0 0;
+	}
+	.last-updated-on {
+		font-style: italic;
+	}
+	h5{
+		font-style: italic;
+		font-weight: normal;
+		font-size: 1rem;
+	}
+</style>
