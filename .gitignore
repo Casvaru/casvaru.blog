@@ -1,5 +1,6 @@
 # build output
 # generated types
+dist/
 .astro/
 
 # dependencies
