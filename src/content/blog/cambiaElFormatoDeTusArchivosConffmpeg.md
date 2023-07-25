@@ -1,5 +1,7 @@
 ---
 id: 'a2'
+picture: '/pictureCarlosSegura.jpeg'
+socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Cambia el formato de tus archivos con ffmpeg'
 description: 'Mejora tu eficiencia al momento de navegar y escribir en la terminal de Windows, utilizando la shell que más te guste, ya que sea el PowerShell u otra, solo necesitaremos instalar Windows terminal de la Microsoft Store.'
 pubDate: 'Nov 22 2022'

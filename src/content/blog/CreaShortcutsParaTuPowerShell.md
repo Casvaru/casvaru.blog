@@ -1,5 +1,7 @@
 ---
 id: 'a1'
+picture: '/pictureCarlosSegura.jpeg'
+socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Crea shortcuts para tu PowerShell'
 description: 'Mejora tu eficiencia al momento de navegar y escribir en la terminal de Windows, utilizando la shell que más te guste, ya que sea el PowerShell u otra, solo necesitaremos instalar Windows terminal de la Microsoft Store.'
 pubDate: 'Nov 15 2022'

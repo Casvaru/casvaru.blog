@@ -1,5 +1,7 @@
 ---
 id: 'a5'
+picture: '/pictureCarlosSegura.jpeg'
+socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Galileo AI: la inteligencia artificial que crea interfaces web'
 description: 'Galileo AI, una plataforma de inteligencia artificial que automatiza el proceso de diseño de interfaces web. Esta herramienta permite a las empresas mejorar la eficiencia en la creación de interfaces de usuario y brindar una experiencia mejorada al usuario en sus sitios web.'
 pubDate: 'Feb 19 2023'
