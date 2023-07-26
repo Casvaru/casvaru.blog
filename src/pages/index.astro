@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import IconTwitter from '../components/IconTwitter.astro';
+import IconTwitter from '../components/icons/IconTwitter.astro';
 import IconTikTok from '../components/icons/IconTikTok.astro'
 import IconTwitch from '../components/icons/IconTwitch.astro'
 const posts = (await getCollection('blog')).sort(
@@ -59,6 +59,7 @@ const posts = (await getCollection('blog')).sort(
 	span{
 		display: flex;
 		justify-content: center;
+		text-align: center;
 		font-style: italic;
 		color: #a8a8a8;
 	}
