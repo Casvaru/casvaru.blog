@@ -51,5 +51,4 @@ Si deseas conocer más sobre esta unidad de medida, te recomiendo visitar la doc
 
 ## Referencias y recursos
 - [https://web.dev/viewport-units/](https://web.dev/viewport-units/)
-- [https://ishadeed.com/article/new-viewport-units/](https://ishadeed.com/article/new-viewport-units/)ort-units/)
 - [https://ishadeed.com/article/new-viewport-units/](https://ishadeed.com/article/new-viewport-units/)
