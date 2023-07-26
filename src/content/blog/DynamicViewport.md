@@ -2,7 +2,7 @@
 id: 'a6'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
-title: 'Viewport dinámico en CSS'
+title: 'Dynamic viewport en CSS'
 description: '¿Sabías de la existencia del viewport dinámico y otras formas de medirlo? Resulta conveniente usarlo en algunos casos para capturar correctamente el viewport cuando el navegador móvil tiene alguna barra adicional en su interfaz de usuario.'
 pubDate: 'Jul 25 2023'
 author: 'Carlos Segura'
@@ -47,4 +47,9 @@ Como podemos observar, al usar una medida fija como `vh`, podríamos estar obsta
 
 Como hemos visto, el uso de esta medida puede mejorar la UX y UI de nuestras webs, pero mi recomendación es no usarla siempre en todas partes, ya que esta unidad se recalcula constantemente para determinar la mejor medida a usar en cada momento. Por lo tanto, es mejor utilizarla cuando sea realmente necesario para evitar que afecte el rendimiento de la web y la experiencia del usuario. Además, es importante no depender únicamente de esta medida, sino acompañarla con la medida tradicional `vh`, para garantizar que, en caso de que un usuario entre a un navegador que no soporte esta medida, el diseño de tu página no se rompa.
 
-Si deseas conocer más sobre esta unidad de medida, te recomiendo visitar la documentación de [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) para aprender más
+Si deseas conocer más sobre esta unidad de medida, te recomiendo visitar la documentación de [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) para aprender más.
+
+## Referencias y recursos
+- [https://web.dev/viewport-units/](https://web.dev/viewport-units/)
+- [https://ishadeed.com/article/new-viewport-units/](https://ishadeed.com/article/new-viewport-units/)ort-units/)
+- [https://ishadeed.com/article/new-viewport-units/](https://ishadeed.com/article/new-viewport-units/)
