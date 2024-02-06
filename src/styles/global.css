@@ -68,7 +68,9 @@ video{
 	padding: 10px 0px;
 }
 p{
-	padding: 5px 0px;
+	font-size: 1.1rem;
+	line-height: 1.75;
+	padding: 15px 0px;
 }
 pre {
 	position: relative;

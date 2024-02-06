@@ -24,11 +24,13 @@ const { title, description, pubDate, updatedDate, heroImage, author, timeToRead,
 				<h1 class="title">{title}</h1>
 				<div class="container">
 					<a href={socialLinkMain} target="_blank"><img src={picture} alt={`foto de perfil de ${picture}`}></a>
-					<div>
-						<h4>{author}</h4>
+					<section>
+						<header>
+							<span>Autor:</span><h4>{author}</h4>
+						</header>
 						<h5>{timeToRead} minutos de lectura</h5>
 						<FormattedDate date={pubDate} />
-					</div>
+					</section>
 				</div>
 				{
 					updatedDate && (
@@ -77,5 +79,16 @@ const { title, description, pubDate, updatedDate, heroImage, author, timeToRead,
 		font-style: italic;
 		font-weight: normal;
 		font-size: 1rem;
+	}
+	section{
+		display: block;
+		flex-direction: column;
+	}
+	section header{
+		display: flex;
+		gap: 5px;
+	}
+	header span{
+		display: flex;
 	}
 </style>
