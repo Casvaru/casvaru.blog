@@ -71,5 +71,9 @@ Al día de hoy la compatibilidad de esta propiedad es de un **69.08%** en CanIUs
   to{scale: 1 1;}
 }
 ```
+<video autoPlay loop muted>
+  <source src="/animation-timeline.mp4" type="video/mp4">
+</video>
+
 ## Referencias y recursos
 - [MDN animation-timeline](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline)
