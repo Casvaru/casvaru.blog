@@ -2,14 +2,14 @@
 id: 'a4'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
-title: 'Winget: Instala programas en Windows de forma rápida y sencilla'
+title: 'Winget Instala programas en Windows de forma rápida y sencilla'
 description: 'Winget es una herramienta de línea de comadnos que te permite instalar y administrar programas de manera eficiente en Windows. Con Winget, puedes ver una lista completa de todos los paquetes disponibles y filtrarlos para encontrar el que estás buscando, ver información detallada sobre un paquete específico y actualizar todos tus paquetes de manera sencilla.'
 pubDate: 'Feb 05 2023'
 author: 'Carlos Segura'
 timeToRead: 6
 ---
 
-## Introduciión
+## Introdución
 
 ¿Estás cansado de buscar por cada web e instalar manualmente programas en tu sistema operativo Windows? ¿Quieres una forma más rápida y eficiente de hacerlo? Entonces, debes conocer Winget, el administrador de paquetes de software para Windows.
 

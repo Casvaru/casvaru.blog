@@ -2,7 +2,7 @@
 id: 'a3'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
-title: 'El diseño web en el 2023: tendencias que impactarán la forma en que navegamos'
+title: 'El diseño web en el 2023 tendencias que impactarán la forma en que navegamos'
 description: 'Descubre las tendencias más innovadoras en el diseño web para 2023 con las nuevas herramientas generativas, diseños e interfaces minimalistas, accesibilidad y mucho más. Accesibilidad, experiencia de usuario, navegación y tecnologías en un solo artículo.'
 pubDate: 'Feb 01 2023'
 author: 'Carlos Segura'
