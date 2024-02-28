@@ -1,0 +1,37 @@
+---
+import IconSearch from '../components/icons/IconSearch.astro'
+import { getCollection } from 'astro:content'
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+)
+---
+<form
+  id="searchForm"
+  autocomplete="off"
+  >
+  <label for="searchInput"><span><IconSearch /></span></label>
+  <input
+    list="articles"
+    type="search"
+    name="search"
+    id="searchInput"
+    placeholder="Buscar artículo"
+    >
+    <datalist id="articles">
+      {posts.map((post) => {
+        return <option value={post.data.title}></option>
+      })}
+    </datalist>
+</form>
+<script>
+  const searchForm = document.getElementById('searchForm')
+  
+  searchForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const search = document.getElementById('searchInput').value.replace(/\s+/g, '-').toLowerCase()
+    
+    const searchRedirect = `http://localhost:3000/blog/${search}`
+    window.location.href = searchRedirect
+    
+  })
+</script>
