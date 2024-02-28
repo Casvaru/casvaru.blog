@@ -8,10 +8,10 @@ import FormattedDate from '../components/FormattedDate.astro';
 import IconTwitter from '../components/icons/IconTwitter.astro';
 import IconTikTok from '../components/icons/IconTikTok.astro'
 import IconTwitch from '../components/icons/IconTwitch.astro'
+import SearchBar from '../components/searchBar.astro'
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
-
+)
 ---
 
 <!DOCTYPE html>
@@ -24,11 +24,14 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<h1>Desarrollo web y diseño UI UX</h1>
-			<span>Blog destinado a mis apuntes y aprendizajes, más contenido en mis redes</span>
+			<span>Blog destinado a mis apuntes y aprendizajes, más contenido en mis redes.</span>
 			<div class="social">
 				<a href="https://twitter.com/casvaru" target="_blank"><IconTwitter/></a>
 				<a href="https://www.tiktok.com/@casvaru" target="_blank"><IconTikTok/></a>
 				<a href="https://www.twitch.tv/casvaru" target="_blank"><IconTwitch/></a>
+			</div>
+			<div class="containerSearch">
+				<SearchBar />
 			</div>
 			<section>
 				<ul>
