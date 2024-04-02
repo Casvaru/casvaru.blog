@@ -26,9 +26,9 @@ const posts = (await getCollection('blog')).sort(
 			<h1>Desarrollo web y diseño UI UX</h1>
 			<span>Blog destinado a mis apuntes y aprendizajes, más contenido en mis redes.</span>
 			<div class="social">
-				<a href="https://twitter.com/casvaru" target="_blank"><IconTwitter/></a>
-				<a href="https://www.tiktok.com/@casvaru" target="_blank"><IconTikTok/></a>
-				<a href="https://www.twitch.tv/casvaru" target="_blank"><IconTwitch/></a>
+				<a tabindex="4" href="https://twitter.com/casvaru" target="_blank"><IconTwitter/></a>
+				<a tabindex="5" href="https://www.tiktok.com/@casvaru" target="_blank"><IconTikTok/></a>
+				<a tabindex="6" href="https://www.twitch.tv/casvaru" target="_blank"><IconTwitch/></a>
 			</div>
 			<div class="containerSearch">
 				<SearchBar />
@@ -39,8 +39,9 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+								<a tabindex="0" href={`/blog/${post.slug}/`}>{post.data.title}</a>
 								<p>{post.data.description}</p>
+								<span>{post.data.timeToRead} minutos de lectura</span>
 							</li>
 						))
 					}
@@ -95,7 +96,7 @@ const posts = (await getCollection('blog')).sort(
 	ul li :global(time) {
 		flex: 0;
 		font-style: italic;
-		color: #595959;
+		color: #a1a1a1;
 	}
 	ul li a:link{
 		position: relative;
@@ -117,5 +118,8 @@ const posts = (await getCollection('blog')).sort(
 	ul li p{
 		padding: 5px 0px;
 		font-size: .9rem;
+	}
+	ul li span{
+		color: white;
 	}
 </style>

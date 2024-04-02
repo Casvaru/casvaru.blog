@@ -1,0 +1,16 @@
+.mainShortKey{
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.7);
+  font-weight: lighter;
+  color: black;
+  
+}
+.mainShortKey span{
+  color: black;
+}

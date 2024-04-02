@@ -1,6 +1,8 @@
 ---
 import IconSearch from '../components/icons/IconSearch.astro'
 import { getCollection } from 'astro:content'
+import ShortKey from '../components/ShortKey.astro'
+
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 )
@@ -16,12 +18,14 @@ const posts = (await getCollection('blog')).sort(
     name="search"
     id="searchInput"
     placeholder="Buscar artículo"
+    tabindex="0"
     >
     <datalist id="articles">
       {posts.map((post) => {
         return <option value={post.data.title}></option>
       })}
     </datalist>
+    <ShortKey key="k" command="Ctrl" />
 </form>
 <script>
   const searchForm = document.getElementById('searchForm')
@@ -35,6 +39,15 @@ const posts = (await getCollection('blog')).sort(
 
     const searchRedirect = `${isProd}? ${isProd}${search} : ${isDevMode} ${isDevMode}${search}`
     window.location.href = searchRedirect
+
     
   })
+  // Short Key
+  function ShortKey(event:any){
+  if(event.key === 'k' && event.ctrlKey){
+    event.preventDefault()
+    document.getElementById('searchInput').focus()
+  }
+}
+window.addEventListener('keydown', ShortKey)
 </script>

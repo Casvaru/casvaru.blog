@@ -1,0 +1,10 @@
+---
+interface Props{
+  command:String,
+  key:String
+}
+import style from './styles/ShortKey.module.css'
+
+const {command = "Ctrl", key = "default"} = Astro.props
+---
+<div class={style.mainShortKey}><span>{command}</span>+<span>{key}</span></div>
