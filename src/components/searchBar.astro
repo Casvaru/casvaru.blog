@@ -29,19 +29,24 @@ const posts = (await getCollection('blog')).sort(
 </form>
 <script>
   const searchForm = document.getElementById('searchForm')
-  
-  searchForm.addEventListener('submit', (event) => {
+
+searchForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    const search = document.getElementById('searchInput').value.replace(/\s+/g, '-').toLowerCase()
-    
-    const isDevMode = "localhost/3000"
-    const isProd = "http://blog.casvaru.com/blog/"
+    const searchInput = document.getElementById('searchInput').value
+    const search = normalizeSearch(searchInput) // Normalizar la búsqueda
 
-    const searchRedirect = `${isProd}? ${isProd}${search} : ${isDevMode} ${isDevMode}${search}`
+    const searchRedirect = `blog/${search}`
     window.location.href = searchRedirect
+})
 
-    
-  })
+// Función para normalizar la búsqueda
+function normalizeSearch(search) {
+    // Reemplazar caracteres acentuados por sus equivalentes sin acento
+    const normalizedSearch = search.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    // Reemplazar espacios en blanco con guiones y convertir a minúsculas
+    return normalizedSearch.replace(/\s+/g, '-').toLowerCase()
+}
+
   // Short Key
   function ShortKey(event:any){
   if(event.key === 'k' && event.ctrlKey){
