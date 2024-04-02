@@ -23,6 +23,7 @@ h6,
 strong,
 b {
 	color: #f7f7f7;
+	text-wrap: pretty;
 }
 #searchForm{
 	display: flex;
@@ -103,11 +104,13 @@ p{
 	font-size: 1.1rem;
 	line-height: 1.75;
 	padding: 15px 0px;
+	text-wrap: pretty;
 }
 pre {
 	position: relative;
 	padding: 3rem 1rem 2rem 1rem;
 	border-radius: 15px;
+	background: #24292E;
 }
 pre::before{
 	position: absolute;

@@ -30,7 +30,10 @@ const posts = (await getCollection('blog')).sort(
     event.preventDefault()
     const search = document.getElementById('searchInput').value.replace(/\s+/g, '-').toLowerCase()
     
-    const searchRedirect = `http://blog.casvaru.com/blog/${search}`
+    const isDevMode = "localhost/3000"
+    const isProd = "http://blog.casvaru.com/blog/"
+
+    const searchRedirect = `${isProd}? ${isProd}${search} : ${isDevMode} ${isDevMode}${search}`
     window.location.href = searchRedirect
     
   })
