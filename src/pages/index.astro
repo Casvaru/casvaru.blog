@@ -8,7 +8,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import IconTwitter from '../components/icons/IconTwitter.astro';
 import IconTikTok from '../components/icons/IconTikTok.astro'
 import IconTwitch from '../components/icons/IconTwitch.astro'
-import SearchBar from '../components/searchBar.astro'
+import SearchBar from '../components/searchBar/searchBar.astro'
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 )
@@ -20,15 +20,16 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<meta name="view-transition" content="same-origin" />
 	</head>
-	<body>
+	<body id="body">
+		<a class="hiddenTab" aria-label="Regresa a la página de inicio" href="/">Ir al inicio</a>
 		<Header />
 		<main>
 			<h1>Desarrollo web y diseño UI UX</h1>
 			<span>Blog destinado a mis apuntes y aprendizajes, más contenido en mis redes.</span>
 			<div class="social">
-				<a tabindex="4" href="https://twitter.com/casvaru" target="_blank"><IconTwitter/></a>
-				<a tabindex="5" href="https://www.tiktok.com/@casvaru" target="_blank"><IconTikTok/></a>
-				<a tabindex="6" href="https://www.twitch.tv/casvaru" target="_blank"><IconTwitch/></a>
+				<a href="https://twitter.com/casvaru" target="_blank"><IconTwitter/></a>
+				<a href="https://www.tiktok.com/@casvaru" target="_blank"><IconTikTok/></a>
+				<a href="https://www.twitch.tv/casvaru" target="_blank"><IconTwitch/></a>
 			</div>
 			<div class="containerSearch">
 				<SearchBar />
@@ -39,7 +40,7 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<FormattedDate date={post.data.pubDate} />
-								<a tabindex="0" href={`/blog/${post.slug}/`}>{post.data.title}</a>
+								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
 								<p>{post.data.description}</p>
 								<span>{post.data.timeToRead} minutos de lectura</span>
 							</li>

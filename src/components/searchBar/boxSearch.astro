@@ -1,0 +1,168 @@
+---
+  import SearchForm from './serchForm.astro'
+  import style from './boxSearch.module.css'
+  import { getCollection } from 'astro:content'
+  import IconKeyEsc from '../icons/iconKeyEsc.astro'
+  const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+)
+---
+<dialog id="boxSearch" class={style.boxSearch} >
+<div class={style.containerListSearch}>
+  <div class={style.containerSearchForm}>
+    <SearchForm />
+  </div>
+    <span id="spanCategories" class={style.spanArticle}>Categorías</span>
+    <div class={style.containerUlListSearch}>
+      <ul id="listCategories">
+      </ul>
+    </div>
+    <span id="spanArticles" class={style.spanArticle}>Artículos</span>
+    <div class={style.containerUlListSearch}>
+      <ul id="listArticles">
+        <span>Da inicio a tu búsqueda.</span>
+      </ul>
+    </div>
+    <footer class={style.footerSearchForm}>
+      <div class={style.containerHotKey}>
+        <IconKeyEsc />
+        <span>Esc para cerrar</span>
+      </div>
+    </footer>
+  </div>
+</dialog>
+<script>
+import getCategoria from './searchCategories.js'
+import { getCollection } from 'astro:content'
+
+const $dialog = document.getElementById('boxSearch')
+const $body = document.getElementById('body')
+let $inputElement = document.querySelectorAll('.searchInputDom')
+const $listArticles = document.getElementById('listArticles')
+const $spanArticles = document.getElementById('spanArticles')
+const $spanCategories = document.getElementById('spanCategories')
+const $listCategories = document.getElementById('listCategories')
+
+const onClick = (event) => {
+  if (event.target === $dialog) {
+    closeDialog()
+    $body.style.overflow = 'auto'
+  }
+}
+
+const onPressExitKey = (event) => {
+  if (event.key === 'Escape') {
+    closeDialog()
+    $body.style.overflow = 'auto'
+  }
+}
+
+$inputElement.forEach((element) => {
+  element.addEventListener('input', getValueInput)
+})
+
+$dialog.addEventListener('click', onClick)
+$dialog.addEventListener('keydown', onPressExitKey)
+
+async function getValueInput(event) {
+  const inputValue = event.target.value.trim().toLowerCase()
+  
+  if (inputValue === '') {
+    resetSearch()
+    return
+  }
+
+  const categoria = getCategoria(inputValue)
+  if (categoria) {
+    displayCategory(categoria)
+    return
+  }
+
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  )
+
+  const titlesArticles = posts.map((element) => element.data.title.toLowerCase())
+
+  // Filtrar los títulos que coincidan con el valor del input (eliminando las tildes)
+  const matchingTitles = titlesArticles.filter((title) => removeAccents(title).includes(removeAccents(inputValue)))
+
+  displayMatchingTitles(matchingTitles)
+}
+
+function closeDialog() {
+  $dialog.close()
+  resetSearch()
+}
+
+function resetSearch() {
+  while ($listArticles.firstChild) {
+    $listArticles.removeChild($listArticles.firstChild)
+  }
+  while ($listCategories.firstChild) {
+    $listCategories.removeChild($listCategories.firstChild)
+  }
+  const spanElement = document.createElement('span')
+  $listArticles.appendChild(spanElement)
+  spanElement.innerHTML = 'Da inicio a tu búsqueda.'
+  $spanCategories.style.display = 'none'
+  $spanArticles.style.display = 'none'
+  $body.style.overflow = 'hidden'
+
+  // Limpiar el contenido de los elementos de entrada
+  $inputElement.forEach(element => {
+    element.value = ''
+  })
+}
+
+function displayCategory(category) {
+  while ($listCategories.firstChild) {
+    $listCategories.removeChild($listCategories.firstChild)
+  }
+  const createListItem = document.createElement('li')
+  const createLink = document.createElement('a')
+  const url = removeAccents(category).replace(/\s+/g, '-')
+  createLink.href = `articulos/${url}`
+  createLink.textContent = category
+  createListItem.appendChild(createLink)
+  $listCategories.appendChild(createListItem)
+  $spanCategories.style.display = 'block'
+}
+
+function displayMatchingTitles(matchingTitles) {
+  $listArticles.innerHTML = ''
+
+  if (matchingTitles.length === 0) {
+    const spanElement = document.createElement('span')
+    while ($listArticles.firstChild) {
+      $listArticles.removeChild($listArticles.firstChild)
+    }
+    while ($listCategories.firstChild) {
+      $listCategories.removeChild($listCategories.firstChild)
+    }
+    $listArticles.appendChild(spanElement)
+    $spanCategories.style.display = 'none'
+    $spanArticles.style.display = 'none'
+    spanElement.innerHTML = 'No se encontraron resultados :('
+    return
+  }
+  matchingTitles.forEach((matchingTitle) => {
+    const listItem = document.createElement('li')
+    const link = document.createElement('a')
+    const url = removeAccents(matchingTitle).replace(/\s+/g, '-')
+    link.href = `blog/${url}`
+    link.textContent = matchingTitle
+    listItem.appendChild(link)
+    $listArticles.appendChild(listItem)
+    $spanCategories.style.display = 'none'
+    $spanArticles.style.display = 'block'
+  })
+}
+
+// Función para eliminar las tildes de una cadena
+function removeAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+}
+
+
+</script>

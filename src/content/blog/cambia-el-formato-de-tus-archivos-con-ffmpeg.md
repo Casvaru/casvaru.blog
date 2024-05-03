@@ -1,5 +1,4 @@
 ---
-id: 'a2'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Cambia el formato de tus archivos con ffmpeg'

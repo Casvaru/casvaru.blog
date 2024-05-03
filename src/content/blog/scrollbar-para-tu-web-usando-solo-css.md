@@ -1,5 +1,4 @@
 ---
-id: 'a1'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Scrollbar para tu web usando solo CSS'

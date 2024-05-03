@@ -1,0 +1,19 @@
+---
+import ShortKey from "../ShortKey/ShortKey.astro"
+import IconSearch from "../icons/IconSearch.astro"
+---
+<form
+  id="searchForm"
+  autocomplete="off"
+  >
+  <label for="searchInput"><span><IconSearch /></span></label>
+  <input
+    list="articles"
+    type="search"
+    name="search"
+    id="searchInput"
+    class="searchInputDom"
+    placeholder="Buscar artículo"
+    >
+    <ShortKey key="k" command="Ctrl" />
+</form>

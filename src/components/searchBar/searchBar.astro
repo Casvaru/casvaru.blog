@@ -1,0 +1,39 @@
+---
+import SearchForm from './serchForm.astro'
+import { getCollection } from 'astro:content'
+import BoxSearch from './boxSearch.astro'
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+)
+---
+<SearchForm />
+<BoxSearch />
+<script>
+  const searchForm = document.getElementById('searchForm')
+  const searchInput = document.getElementById('searchInput')
+  const boxSearch = document.getElementById('boxSearch')
+  const $body = document.getElementById('body')
+
+  const showModal = () => {
+    boxSearch.showModal()
+    $body.style.overflow = 'hidden'
+  }
+  searchForm.addEventListener('click', showModal)
+
+  // Short Key
+  function ShortKey(event:any){
+  if(event.key === 'k' && event.ctrlKey){
+    event.preventDefault()
+    boxSearch.showModal()
+  }
+}
+  const accesibilyTab = (event) => {
+    if(event.key === 'Tab'){
+    }else{
+      boxSearch.showModal()
+    }
+  }
+window.addEventListener('keydown', ShortKey)
+searchInput.addEventListener('keydown', accesibilyTab) // Experimental bad accesibility
+</script>

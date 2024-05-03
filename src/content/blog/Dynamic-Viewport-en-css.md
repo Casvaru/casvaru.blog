@@ -1,5 +1,4 @@
 ---
-id: 'a6'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Dynamic viewport en CSS'

@@ -1,5 +1,4 @@
 ---
-id: 'a1'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Crea shortcuts para tu PowerShell'

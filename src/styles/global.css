@@ -1,7 +1,47 @@
 *{
 	margin: 0; padding: 0;
 	box-sizing: border-box;
-	color: #f2f2f2;
+	color: var(--text-white);
+	border: none;
+	list-style: none;
+}
+:root{
+	--bg-body:#130D17;
+	--text-white:#f2f2f2;
+	--bg-searchbar:#201627;
+	--bg-listSearchbar:#110c14;
+	--border-radius:15px;
+}
+.hiddenTab{
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 1000;
+	background: white;
+	padding: 15px 30px;
+	color: black;
+	opacity: 0;
+}
+.hiddenTab:focus{
+	opacity: 1;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 body {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -9,7 +49,7 @@ body {
 	padding: 20px;
 	max-width: 75ch;
 	text-align: left;
-	background-color: #130D17;
+	background-color: var(--bg-body);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
@@ -22,7 +62,7 @@ h5,
 h6,
 strong,
 b {
-	color: #f7f7f7;
+	color: var(--text-white);
 	text-wrap: pretty;
 }
 #searchForm{
@@ -36,7 +76,7 @@ b {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #201627;
+	background: var(--bg-searchbar);
 	border-radius: 20px;
 	padding: 0px 20px;
 	margin: 30px 0px;
@@ -161,7 +201,10 @@ ol, ul{
 	padding: 10px 30px;
 }
 .iconAstro{
+	/* display: flex; */
 	width: 24px; height: 24px;
+	/* justify-content: center;
+	align-items: center; */
 }
 @keyframes fade-in {
   from { opacity: 0; }

@@ -1,5 +1,4 @@
 ---
-id: 'a3'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'El diseño web en el 2023 tendencias que impactarán la forma en que navegamos'

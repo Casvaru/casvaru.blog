@@ -1,5 +1,4 @@
 ---
-id: 'a5'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Galileo AI la inteligencia artificial que crea interfaces web'

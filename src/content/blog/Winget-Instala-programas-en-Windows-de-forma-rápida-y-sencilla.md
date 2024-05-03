@@ -1,5 +1,4 @@
 ---
-id: 'a4'
 picture: '/pictureCarlosSegura.jpeg'
 socialLinkMain: 'https://www.linkedin.com/in/casvaru/'
 title: 'Winget Instala programas en Windows de forma rápida y sencilla'
