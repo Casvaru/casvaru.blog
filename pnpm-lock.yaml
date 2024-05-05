@@ -17,6 +17,9 @@ dependencies:
   astro:
     specifier: ^2.9.0
     version: 2.9.0
+  dialog-polyfill:
+    specifier: ^0.5.6
+    version: 0.5.6
 
 packages:
 
@@ -1453,6 +1456,10 @@ packages:
 
   /devalue@4.3.2:
     resolution: {integrity: sha512-KqFl6pOgOW+Y6wJgu80rHpo2/3H07vr8ntR9rkkFIRETewbf5GaYYcakYfiKz89K+sLsuPkQIZaXDMjUObZwWg==}
+    dev: false
+
+  /dialog-polyfill@0.5.6:
+    resolution: {integrity: sha512-ZbVDJI9uvxPAKze6z146rmfUZjBqNEwcnFTVamQzXH+svluiV7swmVIGr7miwADgfgt1G2JQIytypM9fbyhX4w==}
     dev: false
 
   /diff@5.1.0:

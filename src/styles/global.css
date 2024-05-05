@@ -20,9 +20,12 @@
 	padding: 15px 30px;
 	color: black;
 	opacity: 0;
+	z-index: -10;
+	text-decoration: none;
 }
 .hiddenTab:focus{
 	opacity: 1;
+	z-index: 110;
 }
 /* width */
 ::-webkit-scrollbar {

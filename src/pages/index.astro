@@ -12,6 +12,7 @@ import SearchBar from '../components/searchBar/searchBar.astro'
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 )
+import dialogPolyfill from 'dialog-polyfill';
 ---
 
 <!DOCTYPE html>
@@ -51,6 +52,12 @@ const posts = (await getCollection('blog')).sort(
 		</main>
 		<Footer />
 	</body>
+	<script>
+    var dialog = document.querySelector('dialog');
+    dialogPolyfill.registerDialog(dialog);
+    // Now dialog always acts like a native <dialog>.
+    dialog.showModal();
+  </script>
 </html>
 <style>
 	main{
