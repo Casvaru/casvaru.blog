@@ -1,0 +1,48 @@
+---
+import '../styles/global.css'
+import BaseHead from '../components/BaseHead.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+  <section>
+    <h3>Ruta no encontrada</h3>
+    <h4>Error 404</h4>
+    <p>¡Oh no! Te has encontrado con una página que no existe. Pero no te preocupes, estamos aquí para ayudarte. vuelve al inicio con el siguiente enlace para retomar tu aventura. 🗺️</p>
+    <a href="/">Volver al inicio</a>
+  </section>
+</body>
+</html>
+
+<style>
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+  }
+  h3{
+    font-size: 2rem;
+  }
+  h4{
+    font-style: italic;
+    opacity: .9;
+    font-weight: 300;
+  }
+  a{
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--mainColor);
+    text-decoration: none
+  }
+  a:hover{
+    color: white;
+    opacity: .8;
+  }
+</style>
